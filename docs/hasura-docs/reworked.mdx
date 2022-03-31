@@ -1,0 +1,68 @@
+---
+sidebar_label: "Part 3: Reworked Version"
+sidebar_position: 2
+---
+
+import CodeEditor from "@site/src/components/CodeEditor";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Postgres: Tables basics
+
+## Outcomes
+
+After reading this page, you'll be able to:
+
+1. Identify the importance of a schema in a Postgres database.
+2. Organize your data into discrete tables.
+3. Create tables in your database using either the Hasura Cloud console, the CLI, or the API.
+4. Track tables to expose them to the GraphQL API.
+
+## What is a schema?
+
+With most databases, your information is organized into what's called a **schema**. A good way of thinking of your schema is imagining of the **structure** or the **organization** of your data.
+
+Many GraphQL frameworks require you to create a schema from scratch and write what are called **resolvers** for each type of data contained in the database. Resolvers are functions that populate data in your schema.
+
+With Hasura, we take care of schema creation and write your resolvers for you. While it's important for you to understand the structure of your data and the relationships between different types, you don't need know how to write a schema or resolvers. This saves you time and allows you to quickly develop your API.
+
+:::tip
+A good starting place for you as a developer is to ask yourself, "What different **types** of information should be present in my database?"
+:::
+
+## A real-world example
+
+For this document, we'll use the example of a developer creating an API for an online news site. The developer knows there will be many different journalists, or **authors** of different **articles**. The authors will have different properties associated with each of them: for example, their name, a profile image, and a unique id.
+
+Additionally, articles will have properties such as a title, the actual body/content, an author, and a unique id.
+
+## Creating a table {#pg-create-tables}
+
+Once you have an idea of how your database will be structured, it's important to understand how each **type** of data is organized. Each type of data is housed in what's called a **table**. A table contains a collection of individual records of a certain type of data.
+
+Using our example above, let's create a table for the `author` schema:
+
+```sql
+author (
+  id SERIAL PRIMARY KEY,
+  name TEXT,
+  image TEXT -- this will be a string of the path to an image
+)
+```
+
+You should be able to trace the different fields listed in this snippet to the properties we discussed in our example.
+
+<!-- Now that you've seen it done, can you write the `articles` schema below? -->
+
+We'll follow the same process to create the `articles` schema:
+
+```sql
+articles (
+  id SERIAL PRIMARY KEY,
+  title TEXT,
+  content TEXT,
+  author_id INT
+)
+```
+
+## End
