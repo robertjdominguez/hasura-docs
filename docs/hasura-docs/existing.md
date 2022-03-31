@@ -11,7 +11,7 @@ Throughout this page, I'm just taking notes as I complete the tasks provided by 
 
 The first step after creating an instance on Hasura cloud is to add an example from the [Hasura Data Hub](https://hasura.io/data-hub/data-models-and-authorization/).
 
-- I'm going to go with the "one-to-many" relationship example
+- I'm going with the "one-to-many" relationship example
 - I'm using this because the relationships between tables - and data - is a huge draw for developers migrating to GraphQL
 - This should be one of the clearest and easiest-to-follow pieces of documentation
 - I like the cards on the [Data Models and Authorization](https://hasura.io/data-hub/data-models-and-authorization/) page
@@ -25,7 +25,7 @@ When I land on [this data model's page](https://hasura.io/data-hub/data-models-a
 
 The example references creating a relationship between two tables: `author` and `passport`. However, as the example continues, the table shifts from `passport` to what - presumably - is correct: `articles`.
 
-From the standpoint of professionalism, a small typo like this sticks out to me. If I'm a new user - with a decent understanding of the principles being used - reading through these docs, that's going to be an immediate tick **against** Hasura. It just feels sloppy.
+From the standpoint of professionalism, an error like this sticks out to me. If I'm a new user - with a decent understanding of the principles being used - reading through these docs, that's going to be an immediate tick **against** Hasura. It feels sloppy.
 
 However, if I'm a new user that's trying to learn about GraphQL and data modelling, I'm just plain confused.
 

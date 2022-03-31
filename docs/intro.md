@@ -16,7 +16,7 @@ Overkill? Maybe. When I was reading through Muskaan's instructions, I pretty qui
 So, I decided to complete this assignment using Docusaurus.
 
 - If you want the repo itself, [have at it](https://github.com/robertjdominguez/hasura-docs)
-- You've also been added as collaborators to a cloud project; if there's any issues, give me a shout
+- You've also been added as collaborators to a [cloud project](https://cloud.hasura.io/project/62ddb196-d438-4196-8725-8b1ea7aa217f/console); if there's any issues, give me a shout
 
 ### `mdx`!
 
